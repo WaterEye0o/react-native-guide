@@ -10,3 +10,5 @@
 4.在当前页面，刷新其他页面listview，返回listview页面，显示空白bug，[相关链接](https://github.com/facebook/react-native/issues/1831)
 
 5.image在listview中更换其source并不会更换图片。[相关链接](https://github.com/facebook/react-native/issues/1397#issuecomment-105367632)
+
+6.只有在组件的render方法被调用时，ref才会被调用，组件才会返回ref。如果你在调用this.refs.xx时render方法还没被调用，那么你得到的是undefined。
